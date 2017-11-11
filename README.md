@@ -1,5 +1,5 @@
 # Slashershare 
-![Build result](https://travis-ci.com/armandfardeau/slashershare.svg?token=3KLNm2srdvZU1ydLwb8x&branch=master)
+![Build result](https://travis-ci.org/armandfardeau/slashershare.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/armandfardeau/slashershare/badge.svg?branch=master)](https://coveralls.io/github/armandfardeau/slashershare?branch=master)
 
 Take a look on the website [SlasherShare](https://slashershare.herokuapp.com/)
