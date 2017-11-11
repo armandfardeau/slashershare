@@ -21,7 +21,7 @@ git clone https://github.com/armandfardeau/slashershare.git
 * Enter the directory:
 
 ```bash
-cd slashershare`
+cd slashershare
 ```
 
 * Ensure you have the requested ruby version :
