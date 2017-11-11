@@ -58,6 +58,16 @@ rails s
 ### Contributions
 Each feature should be covered by at least one test.
 
+### Custom rake tasks
+
+The following command:
+```bash
+rails reload
+```
+Do the same than: 
+```bash 
+rake db:drop db:create db:migrate db:seed
+```
 ### More informations
 
 * Ruby version and rails version
