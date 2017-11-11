@@ -1,11 +1,15 @@
+language: ruby
+rvm:
+- 2.4.1
+sudo: false
+before_script:
+- bundle exec rake db:migrate
+- bundle exec rails s -d
 deploy:
   provider: heroku
   api_key:
-    secure: ihd8ICpBbheBsbq3nn8ZcbXTn9Bi2eABDSdI1e63bv/WqvA5OXy4BBTYLgtvpBbt6mRfSBJT0WYu6HoCb4jp8npJYhh9G8lzLFA0EWI/QgjLvdDOsyh78jm4R39ESbwhpLQkHYsJ6VAKMaQaBxtQaZbizz/hE9BSq1kuAbRIKdt3jn4KuqumCt3vmZlj+rRSC7f8/k7YPYs+h8e0RMjrP4duXLBcBIrbDYN/wzX5oT62186Qwh4jDz5lVU65pA5iMNJHvenSh2ARrVr9W4p9GB1ZApdUhtIHwfKKLTJs9INrUZmk42pudDzTqcKEPyToxxAtDSqeJuMi/eQUUh+KYEKK0VzGS/SfES1WtR6UQ4IJo8kgcbVnD0lVaQ8sZ6upk6/J9kKihEP8GkYd1KmrNUNXpvvbXaTqtiqcjoKI3JBKvdgoYzmUBnhYAIhwkTxLytv3UwRfBUa5RE/+7y3zUrtQi2SFQ8qnFvn45vzdkd4S4rtX3YjC5tNzdzRZQbPsL56m9QBYBpjkfeHF++yOBKcOZeg1aoerXBTc/QIRiY0mVIHxIKW8fAHhve8+UHuSa331mvHm4uUUJEonvrR/AH3hscpQ2F1GxbySUWi2PwXr4TFaMYD+oGf3BBxzAq03UIYucJYWNJdeYLrmJLyg2tEhrhLbFLJ1UYsDTW+WIAU=
-   run:
-    - "rake db:migrate"
-    - restart
-    - "rake cleanup"
-  app: slashershare
-  on:
-    repo: armandfardeau/slashershare
+    secure: YKGbuUuajqwgkceHFRVuzG4HZMmXTalw9dnDa+YpHqFNHNnyg+uU6kpqwOkwvmDWbtWU6AfdvE7aOD590yBqCWNZIlQD7cRXiMD3T1i/eGioBhxo4wLu2GF817CGubHfxqKj+B6hIy84FLxZpN9sLiu8mhTgoEK87h+BM6jmNGF417exFkHXXsBmRF6JuMZxj3HoApAKLpIsCivxnNRzbcxHX0NP4bMoB99zlCFf6yCKFpY08qtUdvqEvv9r5oD0+RVtsiXIvsCfmyEhyZ+0lk07UxpiT4yC17vqEQ612tp/P41VeYjWtewZwhrtSDE0mhvRk60NTGVCVUktUSqCLkeec+gu+HhreYnJD8BptGXAwy+qhY0izygUN7SMCaeAAMr7F+QDebEB/X+ZGUZ73cjps4ELIRBCQDfSua1icNKt1sx5pnWhlNtrKGhbrqHT+Hiitx82ky6C7p6ZbZy/UB9RN2NU1DwiNhhFclbrfjLP+JFbkUbqJw85fNOeZuSs3NCqP/HXkbexBNtCaeJ950PaVs2WSh/qfmybSi7lR5buj9sabHi1EiStIPk3Aj6rPnEGGpepdRTN2oWXf5f1zh6uyyTnPAVKJe90g0Bbu80r9RdBrbrIoL8/iMx8CCA4kYHZXYBohZkG67HPI1MPUSv94qzt8mCl8QMRghBcf7s=
+  run:
+  - rake db:migrate
+  - restart
+  - rake cleanup
