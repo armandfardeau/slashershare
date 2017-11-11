@@ -1,11 +1,11 @@
 deploy:
   provider: heroku
   api_key:
-    secure: RN0aNcybznbTFMwdmQKPTM3qoesXdplODk9AXhpBMvBp/mj5MhWjq5ZopU00wvZvp0GLGEzlvhlJyIuiHb5PnZamsKmk2IM1/BrPSJYgPIIk6nnNhDG7JO0uCqaRtIo7dQm494BXe8pZmr0AZb7CzgQYCPa42mF+2Pmf0zSYU5YNg2qsbdFeMh6KsSGVGUQkJvAe+Q2NVl0f8+jBCKcLluVybrpWM1hpLzWl0aNGaVGox3w3dHObpyWdBO/CZ5kXsSTj8rDMVFFY4ILrZ2BPVBi1lpIksZ3HemIUqw2upnpn4R693K9Gr2a2rC33RfxPjqP2NLF5gjQFKgnG57JVUUtwDxpMsne0sZ5QoTlTvtQoXRI+RF72uECoJ16UtbVp76xVpxgfDSeykhcLdrB+7A7JLVFs0HnffyknMp0s9/1MCKc0H1VoTCDEUZCQIUgtRTPSvIh5XDK0zn1gPfG9TOfZWnXySmALBjnp63IUkCrY982mAOnjttWp1D4Awy3ZUayO+fK+w5J+i6D3O8mN7GfevfI6rpMsjyoh/Vb+OqRvf3vKFg8+keHTjgcTOw2Gvlx2v0/8ViQHNUi4m2iBFcOxLpi1etAmw4Q5WrbtkV4+4e3HbuQca6WdkUzWtJ0wBQMkCDUNqvCKrKgWH3BAe33V+dBWr91mj+q8Y8Dua38=
-  run:
-      - "rake db:migrate"
-      - restart
-      - "rake cleanup"
+    secure: ihd8ICpBbheBsbq3nn8ZcbXTn9Bi2eABDSdI1e63bv/WqvA5OXy4BBTYLgtvpBbt6mRfSBJT0WYu6HoCb4jp8npJYhh9G8lzLFA0EWI/QgjLvdDOsyh78jm4R39ESbwhpLQkHYsJ6VAKMaQaBxtQaZbizz/hE9BSq1kuAbRIKdt3jn4KuqumCt3vmZlj+rRSC7f8/k7YPYs+h8e0RMjrP4duXLBcBIrbDYN/wzX5oT62186Qwh4jDz5lVU65pA5iMNJHvenSh2ARrVr9W4p9GB1ZApdUhtIHwfKKLTJs9INrUZmk42pudDzTqcKEPyToxxAtDSqeJuMi/eQUUh+KYEKK0VzGS/SfES1WtR6UQ4IJo8kgcbVnD0lVaQ8sZ6upk6/J9kKihEP8GkYd1KmrNUNXpvvbXaTqtiqcjoKI3JBKvdgoYzmUBnhYAIhwkTxLytv3UwRfBUa5RE/+7y3zUrtQi2SFQ8qnFvn45vzdkd4S4rtX3YjC5tNzdzRZQbPsL56m9QBYBpjkfeHF++yOBKcOZeg1aoerXBTc/QIRiY0mVIHxIKW8fAHhve8+UHuSa331mvHm4uUUJEonvrR/AH3hscpQ2F1GxbySUWi2PwXr4TFaMYD+oGf3BBxzAq03UIYucJYWNJdeYLrmJLyg2tEhrhLbFLJ1UYsDTW+WIAU=
+   run:
+    - "rake db:migrate"
+    - restart
+    - "rake cleanup"
   app: slashershare
   on:
     repo: armandfardeau/slashershare
