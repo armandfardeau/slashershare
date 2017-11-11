@@ -1,29 +1,44 @@
 require 'test_helper'
 
 class OffersControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   test "should get index" do
-    get offers_index_url
+    logged_in
+    get offers_path
     assert_response :success
   end
 
   test "should get show" do
-    get offers_show_url
+    get offer_path(offers(:one))
     assert_response :success
   end
 
   test "should get new" do
-    get offers_new_url
+    logged_in
+    get new_offer_path
     assert_response :success
   end
 
   test "should get edit" do
-    get offers_edit_url
+    logged_in
+    get edit_offer_path(offers(:two))
     assert_response :success
   end
 
-  test "should get delete" do
-    get offers_delete_url
-    assert_response :success
+
+  # Devise redirection test
+
+  test "should not get edit if not logged in" do
+    get edit_offer_path(offers(:two))
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
+  end
+
+  test "should not get redirect if not logged in" do
+    get offers_path
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
   end
 
 end
