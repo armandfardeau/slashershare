@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      list-style-type: none;
+      a {
+        padding: 2rem;
+        display: inline-block;
+      }
+    }
+  }
+}
