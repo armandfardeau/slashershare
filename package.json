@@ -1,5 +1,7 @@
 {
   "name": "slashershare",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "travis": "^0.1.1"
+  }
 }
