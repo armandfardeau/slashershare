@@ -1,0 +1,5 @@
+<%= form_for @offer, html: {multipart: true} do |f| %>
+    <%= f.text_field :title, placeholder: 'Offer\'s title' %>
+    <%= f.text_area :description, placeholder: 'Offer\'s description' %>
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+<% end %>
