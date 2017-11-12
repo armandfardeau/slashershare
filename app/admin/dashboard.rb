@@ -5,7 +5,7 @@ ActiveAdmin.register_page 'Dashboard' do
   content title: proc {I18n.t('active_admin.dashboard')} do
     columns do
       column do
-        panel 'Recent Users' do
+        panel 'Recent users' do
           ul do
             User.last(5).map do |user|
               li link_to(user.username, admin_users_path(user))
@@ -14,23 +14,12 @@ ActiveAdmin.register_page 'Dashboard' do
         end
       end
       column do
-        panel 'Recent Users' do
+        panel 'Recent offers' do
           ul do
-            User.last(5).map do |user|
-              li link_to(user.username, admin_users_path(user))
+            Offer.last(5).map do |offer|
+              li link_to(offer.title, admin_offer_path(offer))
             end
           end
-        end
-      end
-    end
-
-    columns do
-      column do
-        div do
-          br
-          text_node %{<iframe src='https://rpm.newrelic.com/public/charts/6VooNO2hKWB'
-                              width='500' height='300' scrolling='no' frameborder='no'>
-                      </iframe>}.html_safe
         end
       end
     end
