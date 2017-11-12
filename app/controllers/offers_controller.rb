@@ -7,7 +7,6 @@ class OffersController < ApplicationController
   end
 
   def show
-    @offer = Offer.find(params[:id])
   end
 
   def new
@@ -43,10 +42,10 @@ class OffersController < ApplicationController
   private
 
   def set_offer
-    offer = Offer.find(params[:id])
+    @offer = Offer.find(params[:id])
   end
 
   def allowed_params
-    params.require(:offer).permit(:title, :description)
+    params.require(:offer).permit(:title, :description, :tag_list)
   end
 end
