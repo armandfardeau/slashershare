@@ -4,8 +4,18 @@
 
 Take a look on the website [SlasherShare](https://slashershare.herokuapp.com/)
 
-## How to install
+## How to install - short way
 
+You're not afraid of copying and pasting code into your terminal, are you?
+
+```bash
+git clone https://github.com/armandfardeau/slashershare.git
+cd slashershare
+chmod +x r.sh
+./r.sh
+```
+
+## How to install - detailed way
 We strongly suggest the use of ruby version manager aka rvm, to install paste the following in your terminal: 
 
 ``` bash
@@ -54,6 +64,11 @@ rails reload
 * Start rails server
 ```bash
 rails s
+```
+
+* Start browsing
+```bash
+open http://localhost:3000
 ```
 
 ### Contributions
