@@ -1,0 +1,14 @@
+<h1><%= @user.username %></h1>
+<h3> See my offer:</h3>
+<% @user.offers.each do |offer| %>
+    <div>
+      <h4><%= offer.title %></h4>
+      <p><%= offer.description %></p>
+      <p>Tags: <%= offer.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></p>
+    </div>
+
+    <h3>See my tags</h3>
+    <%= @user.tag_list %>
+<% end %>
+
+
