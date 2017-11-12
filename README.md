@@ -14,6 +14,7 @@ cd slashershare
 chmod +x r.sh
 ./r.sh
 ```
+Reload page after installation and you're good to go !
 
 ## How to install - detailed way
 We strongly suggest the use of ruby version manager aka rvm, to install paste the following in your terminal: 
