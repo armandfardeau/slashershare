@@ -4,8 +4,10 @@ one:
   title: MyString
   description: MyText
   published_on: 2017-11-11
+  user: one
 
 two:
   title: MyString
   description: MyText
   published_on: 2017-11-11
+  user: two
