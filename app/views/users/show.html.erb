@@ -2,9 +2,13 @@
 <h3> See my offer:</h3>
 <% @user.offers.each do |offer| %>
     <div>
-      <h4><%= offer.title %></h4>
+      <h2><%= offer.title %></h2>
       <p><%= offer.description %></p>
-      <p>Tags: <%= offer.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %></p>
+      <% if offer.tag_list.present? %>
+          <p>Tags:
+            <%= raw(offer.tag_list.map {|t| link_to t, tag_path(t)}.join(', ')) %>
+          </p>
+      <% end %>
     </div>
 
     <h3>See my tags</h3>
