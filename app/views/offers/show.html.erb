@@ -1,4 +1,10 @@
 <% if @offer.present? %>
     <h2><%= @offer.title %></h2>
     <p><%= @offer.description %></p>
+    <% if @offer.tag_list.present? %>
+        <p>Tags:
+          <%= raw(@offer.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')) %>
+        </p>
+    <% end %>
+    <%= link_to @offer.user.username, user_path(@offer.user) %>
 <% end %>

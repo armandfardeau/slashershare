@@ -1,5 +1,17 @@
 <%= form_for @offer, html: {multipart: true} do |f| %>
-    <%= f.text_field :title, placeholder: 'Offer\'s title' %>
-    <%= f.text_area :description, placeholder: 'Offer\'s description' %>
-    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    <div>
+      <%= f.label :title %><br/>
+      <%= f.text_field :title, placeholder: 'Offer\'s title' %>
+    </div>
+    <div>
+      <%= f.label :description %><br/>
+      <%= f.text_area :description, placeholder: 'Offer\'s description' %>
+    </div>
+    <div>
+      <%= f.label :tag_list, 'Tags (separated by commas)' %><br/>
+      <%= f.text_field :tag_list, placeholder: 'Accountant, English speaker etc...' %>
+    </div>
+    <div>
+      <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    </div>
 <% end %>

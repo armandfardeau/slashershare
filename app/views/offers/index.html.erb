@@ -1,6 +1,1 @@
-<% if @offers.present? %>
-    <% @offers.each do |offer| %>
-        <h2><%= offer.title %></h2>
-        <p><%= offer.description %></p>
-    <% end %>
-<% end %>
+<%= render 'shared/offers_list' %>
