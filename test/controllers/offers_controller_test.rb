@@ -26,6 +26,11 @@ class OffersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get create" do
+    logged_in
+    get new_offer_path
+    assert_response :success
+  end
 
   # Devise redirection test
 
