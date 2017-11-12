@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+userZero = User.create! :username => 'Armand Fardeau', :email => 'fardeauarmand@gmail.com', :password => 'adminadmin', :password_confirmation => 'adminadmin'
 userOne = User.create! :username => 'John Doe', :email => 'doe@gmail.com', :password => 'password', :password_confirmation => 'password'
 userTwo = User.create! :username => 'John Oed', :email => 'Oed@gmail.com', :password => 'password', :password_confirmation => 'password'
 userThree = User.create! :username => 'John deo', :email => 'deo@gmail.com', :password => 'password', :password_confirmation => 'password'
@@ -42,7 +43,20 @@ Robin is the name of several fictional characters appearing in comic books publi
 OFFER
 
 offerSix = Offer.create! title: "Robin",
-                          user_id: userThree.id,
-                          description: <<-OFFER
+                         user_id: userThree.id,
+                         description: <<-OFFER
 Robin is the name of several fictional characters appearing in comic books published by DC Comics, originally created by Bob Kane, Bill Finger and Jerry Robinson, as a junior counterpart to DC Comics superhero Batman. The team of Batman and Robin is commonly referred to as the Dynamic Duo or the Caped Crusaders. (from Wikipedia)
 OFFER
+
+offerOne.tag_list.add 'Accountant', 'Software engineer', 'English speaker'
+offerOne.save
+offerTwo.tag_list.add 'Accountant', 'Software engineer', 'English speaker'
+offerTwo.save
+offerThree.tag_list.add 'Accountant', 'Software engineer', 'English speaker'
+offerThree.save
+offerFour.tag_list.add 'Accountant', 'Software engineer', 'English speaker'
+offerFour.save
+offerFive.tag_list.add 'Accountant', 'Software engineer', 'English speaker'
+offerFive.save
+offerSix.tag_list.add 'Accountant', 'Software engineer', 'English speaker'
+offerSix.save
