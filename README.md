@@ -1,6 +1,7 @@
 # Slashershare 
 ![Build result](https://travis-ci.org/armandfardeau/slashershare.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/armandfardeau/slashershare/badge.svg?branch=master)](https://coveralls.io/github/armandfardeau/slashershare?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4f04691b4116554cbe63/maintainability)](https://codeclimate.com/github/armandfardeau/slashershare/maintainability)
 
 Take a look on the website [SlasherShare](https://slashershare.herokuapp.com/)
 
