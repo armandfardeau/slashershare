@@ -42,12 +42,13 @@ If the output is ruby-2.4.2 you can move to the next section.
 
 * install dependancies
 ```bash
-bundle install --without production
+bundle install
 ```
 
-* Make migration
+* Make migration and load seed
 ```bash
 rails db:migrate
+rails reload
 ```
 
 * Start rails server
