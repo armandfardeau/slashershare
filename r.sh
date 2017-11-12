@@ -4,5 +4,6 @@ rvm install ruby-2.4.2
 rvm use 2.4.2
 bundle install
 rails reload
+spring stop
 open http://localhost:3000
-rails s
+rails sg
