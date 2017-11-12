@@ -8,6 +8,9 @@ end
 # active admin as BO
 gem 'activeadmin', github: 'activeadmin'
 
+# Use rollbar to catch error
+gem 'rollbar'
+
 # act as taggable on
 gem 'acts-as-taggable-on', '~> 5.0'
 

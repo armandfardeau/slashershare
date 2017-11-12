@@ -86,6 +86,23 @@ Do the same than:
 ```bash 
 rake db:drop db:create db:migrate db:seed
 ```
+
+### Active admin back office
+
+Active admin is install both in developement and in production to ensure an easy developement.
+Login and password couple can be found in seed file.
+
+To login go to 
+
+[http://localhost:3000/admin/](http://localhost:3000/admin/)
+
+or in production
+
+[https://slashershare.herokuapp.com/admin](https://slashershare.herokuapp.com/admin)
+
+
+
+
 ### More informations
 
 * Ruby version and rails version
