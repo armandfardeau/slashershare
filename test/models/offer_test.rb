@@ -11,15 +11,27 @@ class OfferTest < ActiveSupport::TestCase
   end
 
   test 'is not valid without a description' do
-    s = Offer.create(title: 'My test submission', description: nil)
+    s = Offer.create(
+        title: 'My test submission',
+        description: nil)
     assert s.errors[:description].any?
+    refute s.valid?
+  end
+
+  test 'is not valid without a place' do
+    s = Offer.create(
+        title: 'My test submission',
+        description: 'My description',
+        place: nil)
+    assert s.errors[:place].any?
     refute s.valid?
   end
 
   test 'is valid with required attributes' do
     s = users(:one).offers.create(
         title: 'My test submission',
-        description: 'a test submission')
+        description: 'a test submission',
+        place: 'NY')
     assert s.valid?
   end
 
@@ -27,6 +39,7 @@ class OfferTest < ActiveSupport::TestCase
     s = Offer.create(
         title: 'My test submission',
         description: 'a test submission',
+        place: 'NY',
         user: users(:one))
     assert s.valid?
   end

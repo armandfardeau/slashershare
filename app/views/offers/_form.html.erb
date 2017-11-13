@@ -5,7 +5,11 @@
     </div>
     <div>
       <%= f.label :description %><br/>
-      <%= f.text_area :description, placeholder: 'Offer\'s description' %>
+      <%= f.text_area :description, placeholder: 'Offer\'s description',cols: '30', rows: '10' %>
+    </div>
+    <div>
+      <%= f.label :place %><br/>
+      <%= f.text_field :place, placeholder: '22 Jump street, Brisbane' %>
     </div>
     <div>
       <%= f.label :tag_list, 'Tags (separated by commas)' %><br/>
