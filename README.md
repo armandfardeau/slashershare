@@ -52,6 +52,10 @@ ruby -v
 ```
 If the output is ruby-2.4.2 you can move to the next section.
 
+* install bundler
+```bash
+gem install bundler
+```
 * install dependancies
 ```bash
 bundle install
