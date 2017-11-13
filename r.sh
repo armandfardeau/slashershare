@@ -4,7 +4,7 @@ source ~/.rvm/scripts/rvm
 rvm install ruby-2.4.2
 rvm use 2.4.2
 gem install bundler
-bundle install
+bundle install --without production
 spring stop
 rails db:environment:set RAILS_ENV=development
 rails reload
