@@ -34,6 +34,17 @@ class UserTest < ActiveSupport::TestCase
     assert u.valid?
   end
 
+  test 'is valid with full attributes' do
+    u = User.create(
+        email: 'userOne@email.com',
+        password: 'password',
+        age: '22',
+        address: 'NY',
+        phone:'0612686811'
+    )
+    assert u.valid?
+  end
+
   test 'is valid with a username' do
     u = User.create(
         username: 'userTest',

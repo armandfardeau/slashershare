@@ -9,8 +9,23 @@
     </div>
 
     <div class="field">
+      <%= f.label :age %><br/>
+      <%= f.text_field :age, autofocus: true %>
+    </div>
+
+    <div class="field">
       <%= f.label :email %><br/>
       <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone %><br/>
+      <%= f.text_field :phone, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address %><br/>
+      <%= f.text_field :address, autofocus: true %>
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
