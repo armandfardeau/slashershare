@@ -9,4 +9,4 @@ spring stop
 rails db:environment:set RAILS_ENV=development
 rails reload
 open http://localhost:3000
-rails sg
+rails s
