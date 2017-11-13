@@ -58,7 +58,7 @@ gem install bundler
 ```
 * install dependancies
 ```bash
-bundle install
+bundle install --without production
 ```
 
 * Make migration and load seed
