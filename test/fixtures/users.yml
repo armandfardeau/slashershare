@@ -6,11 +6,17 @@
 #
 one:
   username: userOne
+  age: 22
+  phone: 0654542122
+  address: NY
   email: userOne@email.com
   encrypted_password: <%= User.new.send(:password_digest, 'secret') %>
 
 
 two:
   username: userTwo
+  age: 23
+  phone: 0654542123
+  address: WA
   email: userTWo@email.com
   encrypted_password: <%= User.new.send(:password_digest, 'secret') %>
