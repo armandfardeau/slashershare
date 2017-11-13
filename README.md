@@ -13,7 +13,7 @@ Table of content
 
 3. [How to contribute](#contributions)
 
-4. [More infos](#more-informations)
+4. [More infos](#more-infos)
 
 ______________________________________________________________
 
