@@ -1,6 +1,18 @@
 {
   "MiniTest": {
     "coverage": {
+      "/Users/armandfardeau/WWW/slashershare/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/armandfardeau/WWW/slashershare/app/controllers/application_controller.rb": [
         1,
         1,
@@ -36,6 +48,21 @@
       ],
       "/Users/armandfardeau/WWW/slashershare/app/helpers/users_helper.rb": [
         1,
+        null
+      ],
+      "/Users/armandfardeau/WWW/slashershare/app/controllers/pages_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/armandfardeau/WWW/slashershare/app/controllers/offers_controller.rb": [
@@ -88,34 +115,6 @@
         null,
         1,
         0,
-        null,
-        null
-      ],
-      "/Users/armandfardeau/WWW/slashershare/app/controllers/users_controller.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/armandfardeau/WWW/slashershare/app/controllers/pages_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        0,
-        null,
-        1,
-        null,
         null,
         null
       ],
@@ -176,6 +175,6 @@
         0
       ]
     },
-    "timestamp": 1510578687
+    "timestamp": 1510583753
   }
 }
