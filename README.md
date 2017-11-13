@@ -5,6 +5,18 @@
 
 Take a look on the website [SlasherShare](https://slashershare.herokuapp.com/)
 
+Table of content
+
+1. [Short install](#how-to-install---short-way)
+
+2. [Detailed install](#how-to-install---detailed-way)
+
+3. [How to contribute](#contributions)
+
+4. [More infos](#more-informations)
+
+______________________________________________________________
+
 ## How to install - short way
 
 You're not afraid of copying and pasting code into your terminal, are you?
@@ -16,6 +28,8 @@ chmod +x r.sh
 ./r.sh
 ```
 Reload page after installation and you're good to go !
+
+______________________________________________________________
 
 ## How to install - detailed way
 We strongly suggest the use of ruby version manager aka rvm, to install paste the following in your terminal: 
@@ -88,7 +102,9 @@ rails s
 open http://localhost:3000
 ```
 
-### Contributions
+______________________________________________________________
+
+## Contributions
 
 This project is open to contribution, in order to keep the codebase as clean as possible, you're advised to follow the rules.
 
@@ -116,6 +132,10 @@ add and commit your changes, then push it to the repo
 Be explicit, explain what you add to the project !
 Ask for a peer review.
 
+______________________________________________________________
+
+## More infos
+
 ### Custom rake tasks
 
 The following command:
@@ -141,9 +161,6 @@ or in production
 [https://slashershare.herokuapp.com/admin](https://slashershare.herokuapp.com/admin)
 
 
-
-
-### More informations
 
 * Ruby version and rails version
 
