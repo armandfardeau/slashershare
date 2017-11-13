@@ -89,7 +89,32 @@ open http://localhost:3000
 ```
 
 ### Contributions
-Each feature should be covered by at least one test.
+
+This project is open to contribution, in order to keep the codebase as clean as possible, you're advised to follow the rules.
+
+#### Rules 
+Branch master is **protected**, you cannot push to it.
+
+Each feature should be covered by **at least** one test.
+
+Each pull request need to be validated by :
+
+- codeclimate
+- coveralls
+- travis
+
+To contribute, start a new branch
+
+`git checkout -b feature/nameofyourfeature`
+
+add and commit your changes, then push it to the repo
+
+`git push --set-upstream origin feature/nameofyourfeature`
+
+![pull request image](https://kirstiejane.github.io/friendly-github-intro/assets/images-slides/my-first-pr-new-pr1.png)
+
+Be explicit, explain what you add to the project !
+Ask for a peer review.
 
 ### Custom rake tasks
 
