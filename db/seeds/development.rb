@@ -6,10 +6,37 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-userZero = User.create! :username => 'Armand Fardeau', :email => 'fardeauarmand@gmail.com', :password => 'adminadmin', :password_confirmation => 'adminadmin'
-userOne = User.create! :username => 'John Doe', :email => 'doe@gmail.com', :password => 'password', :password_confirmation => 'password'
-userTwo = User.create! :username => 'John Oed', :email => 'Oed@gmail.com', :password => 'password', :password_confirmation => 'password'
-userThree = User.create! :username => 'John deo', :email => 'deo@gmail.com', :password => 'password', :password_confirmation => 'password'
+userZero = User.create! :username => 'Armand Fardeau',
+                        :email => 'fardeauarmand@gmail.com',
+                        :age => 22,
+                        :phone => '0147498143',
+                        :address => '22 rue des amandiers 92100 Boulogne-Billancourt',
+                        :password => 'adminadmin',
+                        :password_confirmation => 'adminadmin'
+
+userOne = User.create! :username => 'John Doe',
+                       :email => 'doe@gmail.com',
+                       :age => 22,
+                       :phone => '0147498143',
+                       :address => '22 rue des amandiers 92100 Boulogne-Billancourt',
+                       :password => 'password',
+                       :password_confirmation => 'password'
+
+userTwo = User.create! :username => 'John Oed',
+                       :email => 'Oed@gmail.com',
+                       :age => 22,
+                       :phone => '0147498143',
+                       :address => '22 rue des amandiers 92100 Boulogne-Billancourt',
+                       :password => 'password',
+                       :password_confirmation => 'password'
+
+userThree = User.create! :username => 'John deo',
+                         :email => 'deo@gmail.com',
+                         :age => 22,
+                         :phone => '0147498143',
+                         :address => '22 rue des amandiers 92100 Boulogne-Billancourt',
+                         :password => 'password',
+                         :password_confirmation => 'password'
 
 
 offerOne = Offer.create! title: "Batman",
