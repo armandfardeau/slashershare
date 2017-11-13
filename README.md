@@ -101,7 +101,7 @@ Each pull request need to be validated by :
 
 - codeclimate
 - coveralls
--travis
+- travis
 
 To contribute, start a new branch
 
