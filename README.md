@@ -36,14 +36,25 @@ git clone https://github.com/armandfardeau/slashershare.git
 cd slashershare
 ```
 
-* Ensure you have the requested ruby version :
+* Ensure you have the requested ruby version and rvm:
 
 ```bash
 ruby -v
 ```
 
 if it's ruby-2.4.2 you're good to go! 
-else, install the requested version with rvm:
+else, install the requested version with rvm.
+
+* check your rvm version
+
+```bash
+rvm -v
+```
+If you get an rvm not found error, you may try the following
+
+```bash
+source ~/.rvm/scripts/rvm
+```
 
 ```bash
 rvm install ruby-2.4.2
