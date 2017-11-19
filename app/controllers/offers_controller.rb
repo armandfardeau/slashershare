@@ -16,7 +16,7 @@ class OffersController < ApplicationController
   def create
     @offer = current_user.offers.build(allowed_params)
     if @offer.save
-      redirect_to @offer, notice: "Created offer."
+      redirect_to @offer, notice: 'Created offer.'
     else
       render :new
     end
@@ -29,14 +29,13 @@ class OffersController < ApplicationController
   def update
     @offer = Offer.find(params[:id])
     if @offer.update_attributes(params[:offer])
-      redirect_to @offer, notice: "Updated offer."
+      redirect_to @offer, notice: 'Updated offer.'
     else
       render :edit
     end
   end
 
   def delete
-
   end
 
   private

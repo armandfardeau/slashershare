@@ -9,6 +9,7 @@ AllCops:
     - 'config/initializers/devise.rb'
     - 'config/initializers/rollbar.rb'
     - 'config/spring.rb'
+    - 'config/puma.rb'
   TargetRubyVersion: 2.1
 
 Rails:
