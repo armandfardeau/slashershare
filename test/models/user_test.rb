@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-
   test 'has a offer association' do
     assert_equal 1, users(:one).offers.size
     assert users(:one).offers.includes offers(:one)
@@ -40,7 +39,7 @@ class UserTest < ActiveSupport::TestCase
         password: 'password',
         age: '22',
         address: 'NY',
-        phone:'0612686811'
+        phone: '0612686811'
     )
     assert u.valid?
   end
@@ -55,7 +54,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'should have unique email' do
-    u = User.create(
+    User.create(
         username: 'userTest',
         email: 'userOne@email.com',
         password: 'password'
@@ -69,5 +68,4 @@ class UserTest < ActiveSupport::TestCase
     assert c.errors[:email].any?
     refute c.valid?
   end
-
 end
