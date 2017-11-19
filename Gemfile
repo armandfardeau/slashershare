@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
+
+# Use rubocop as a linter
+gem 'rubocop'
 
 # active admin as BO
 gem 'activeadmin', github: 'activeadmin'
@@ -64,19 +67,19 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  #enable gzip compression
+  # enable gzip compression
   gem 'heroku-deflater'
 end
 
