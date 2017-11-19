@@ -13,7 +13,8 @@ class OfferTest < ActiveSupport::TestCase
   test 'is not valid without a description' do
     s = Offer.create(
         title: 'My test submission',
-        description: nil)
+        description: nil
+    )
     assert s.errors[:description].any?
     refute s.valid?
   end
@@ -22,7 +23,8 @@ class OfferTest < ActiveSupport::TestCase
     s = Offer.create(
         title: 'My test submission',
         description: 'My description',
-        place: nil)
+        place: nil
+    )
     assert s.errors[:place].any?
     refute s.valid?
   end
@@ -31,7 +33,8 @@ class OfferTest < ActiveSupport::TestCase
     s = users(:one).offers.create(
         title: 'My test submission',
         description: 'a test submission',
-        place: 'NY')
+        place: 'NY'
+    )
     assert s.valid?
   end
 
@@ -40,14 +43,16 @@ class OfferTest < ActiveSupport::TestCase
         title: 'My test submission',
         description: 'a test submission',
         place: 'NY',
-        user: users(:one))
+        user: users(:one)
+    )
     assert s.valid?
   end
 
   test 'is not valid without a user' do
     s = Offer.create(
         title: 'My test submission',
-        description: 'a test submission')
+        description: 'a test submission'
+    )
     refute s.valid?
   end
 
@@ -55,12 +60,11 @@ class OfferTest < ActiveSupport::TestCase
     assert_equal users(:one), offers(:one).user
   end
 
-
   test 'is taggable' do
     offers(:one).tag_list = 'blog', 'ruby'
     offers(:one).save
     assert_equal 2, offers(:one).tags.size
-    assert_equal ['blog', 'ruby'], offers(:one).tag_list
+    assert_equal %w[blog ruby], offers(:one).tag_list
   end
 
   test 'find tagged with' do
