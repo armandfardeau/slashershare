@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Use rubocop as a linter
+gem 'rubocop'
+
 # active admin as BO
 gem 'activeadmin', github: 'activeadmin'
 
