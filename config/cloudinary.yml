@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: slashershare
+  api_key: '651179163962481'
+  api_secret: E_JvkO1lIT9uNwDsvL-FQw9PwTI
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: slashershare
+  api_key: '651179163962481'
+  api_secret: E_JvkO1lIT9uNwDsvL-FQw9PwTI
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: slashershare
+  api_key: '651179163962481'
+  api_secret: E_JvkO1lIT9uNwDsvL-FQw9PwTI
+  enhance_image_tag: true
+  static_image_support: false

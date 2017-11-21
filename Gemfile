@@ -4,6 +4,9 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
+# use paperclip and cloudinary to store images
+gem 'paperclip', '~> 5.0.0'
+gem 'paperclip-cloudinary'
 
 # Use rubocop as a linter
 gem 'rubocop'
