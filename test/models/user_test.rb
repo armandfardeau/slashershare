@@ -39,7 +39,8 @@ class UserTest < ActiveSupport::TestCase
         password: 'password',
         age: '22',
         address: 'NY',
-        phone: '0612686811'
+        phone: '0612686811',
+        avatar: sample_file
     )
     assert u.valid?
   end
@@ -67,5 +68,15 @@ class UserTest < ActiveSupport::TestCase
     )
     assert c.errors[:email].any?
     refute c.valid?
+  end
+
+  test 'is not valid with incorrect attachment' do
+    u = User.create(
+        email: 'userOne@email.com',
+        password: 'password',
+        avatar: sample_file('sample-file.pdf')
+    )
+    assert u.errors[:avatar].any?
+    refute u.valid?
   end
 end
