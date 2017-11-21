@@ -10,4 +10,8 @@ class ActiveSupport::TestCase
   def logged_in
     sign_in users(:one), scope: :user
   end
+
+  def sample_file(filename = 'sample-file.png')
+    File.new(Rails.root.join('test', 'fixtures', 'files', filename))
+  end
 end
