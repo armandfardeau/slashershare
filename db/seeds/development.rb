@@ -5,11 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+images_seeds_path = Pathname('app/assets/images/images_seeds')
+
 if Rails.env.development?
   AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 end
 
 user_zero = User.create! username: 'Armand Fardeau',
+                         avatar: File.new(Rails.root.join(images_seeds_path, 'armand_fardeau.jpg')),
                          email: 'fardeauarmand@gmail.com',
                          age: 22,
                          phone: '0147498143',
