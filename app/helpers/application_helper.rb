@@ -6,4 +6,10 @@ module ApplicationHelper
       render 'layouts/partials/sign_in_up'
     end
   end
+
+  def avatar_url(user)
+    if user.avatar
+      user.avatar.url
+    end
+  end
 end
