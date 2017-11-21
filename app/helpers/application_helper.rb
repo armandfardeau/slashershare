@@ -7,9 +7,8 @@ module ApplicationHelper
     end
   end
 
-  def avatar_url(user)
-    if user.avatar
-      user.avatar.url
-    end
+  def avatar_url(user, size = :thumb)
+    return false unless user.avatar?
+    user.avatar.url(size)
   end
 end
