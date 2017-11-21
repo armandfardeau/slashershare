@@ -147,6 +147,20 @@ Do the same than:
 rake db:drop db:create db:migrate db:seed
 ```
 
+Generate doc with Rdoc the simple way :
+```bash
+rails doc:generate
+```
+
+Get doc status with :
+```bash
+rails doc:status
+```
+
+You can get the list of rake task with :
+```bash
+rails -T
+```
 ### Active admin back office
 
 Active admin is install both in developement and in production to ensure an easy developement.
@@ -183,7 +197,11 @@ rails db:create
 rails db:migrate
 
 * How to run the test suite
+
+```bash 
 rails test
+rubocop
+```
 
 * Services (job queues, cache servers, search engines, etc.)
 
