@@ -5,6 +5,8 @@
 
 Take a look on the website [SlasherShare](https://slashershare.herokuapp.com/)
 
+Check the doc [SlasherShare-doc](https://armandfardeau.github.io/slashershare/)
+
 Table of content
 
 1. [Short install](#how-to-install---short-way)
