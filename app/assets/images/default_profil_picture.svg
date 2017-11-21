@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="139px" height="139px" viewBox="0 0 139 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+  <title>Person</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <path d="M122.402594,139 L139,139 L139,0 L0,0 L0,139 L15.597406,139 C18.780825,112.606486 34.3718968,91.2465283 54.7697755,84.3508065 C44.7948863,79.0641561 38,68.5755934 38,56.5 C38,39.1030304 52.1030304,25 69.5,25 C86.8969696,25 101,39.1030304 101,56.5 C101,68.7359389 94.0234642,79.3424205 83.8311928,84.5586447 C103.933851,91.6675419 119.250512,112.866298 122.402594,139 Z" id="path-1"></path>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Person">
+      <rect id="Rectangle" fill="#FFFFFF" fill-rule="evenodd" x="0" y="0" width="139" height="139"></rect>
+      <g id="Combined-Shape">
+        <use fill="#9A9A9A" fill-rule="evenodd" xlink:href="#path-1"></use>
+        <path stroke="#979797" stroke-width="1" d="M122.844707,138.5 C119.631605,113.017172 104.844953,92.0137609 85.051013,84.4739879 C95.0993834,78.8803443 101.5,68.2602417 101.5,56.5 C101.5,38.826888 87.173112,24.5 69.5,24.5 C51.826888,24.5 37.5,38.826888 37.5,56.5 C37.5,68.096911 43.7233683,78.5923699 53.551882,84.2490346 C33.4693746,91.5829564 18.4028901,112.743389 15.155293,138.5 L0.5,138.5 L0.5,0.5 L138.5,0.5 L138.5,138.5 L122.844707,138.5 Z"></path>
+      </g>
+    </g>
+  </g>
+</svg>
