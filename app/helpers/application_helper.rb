@@ -6,4 +6,9 @@ module ApplicationHelper
       render 'layouts/partials/sign_in_up'
     end
   end
+
+  def avatar_url(user, size = :thumb)
+    return false unless user.avatar?
+    user.avatar.url(size)
+  end
 end
