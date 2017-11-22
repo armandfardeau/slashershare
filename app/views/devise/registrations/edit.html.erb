@@ -4,6 +4,12 @@
     <%= devise_error_messages! %>
 
     <div class="field">
+      <%= f.label :avatar %><br/>
+      <%= image_tag avatar_url(current_user), type: 'file', class: 'avatar', id: 'target' %><br/>
+      <span class="btn btn-default btn-file">Uploader une image<%= f.file_field :avatar, id: 'pictureInput' %></span>
+    </div>
+
+    <div class="field">
       <%= f.label :username %><br/>
       <%= f.text_field :username %>
     </div>
