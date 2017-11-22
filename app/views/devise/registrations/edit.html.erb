@@ -5,7 +5,7 @@
 
     <div class="field">
       <%= f.label :avatar %><br/>
-      <%= image_tag avatar_url(current_user), type: 'file', class: 'avatar', id: 'target' %><br/>
+      <%= image_tag avatar_url, type: 'file', class: 'avatar', id: 'target' %><br/>
       <span class="btn btn-default btn-file">Uploader une image<%= f.file_field :avatar, id: 'pictureInput' %></span>
     </div>
 
