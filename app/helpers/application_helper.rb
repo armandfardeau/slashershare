@@ -7,8 +7,10 @@ module ApplicationHelper
     end
   end
 
-  def avatar_url(user, size = :thumb)
-    return false unless user.avatar?
-    user.avatar.url(size)
-  end
+  def avatar_url(user = current_user, size = :thumb)
+    if !user.avatar?
+      'default_profil_picture.svg'
+    else
+      user.avatar.url(size)
+    end
 end
