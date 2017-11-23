@@ -44,37 +44,37 @@ user_three = User.create! username: 'John deo',
                           password: 'password',
                           password_confirmation: 'password'
 
-userFour = User.create! :username => 'Anthelme Risser',
-                        :email => 'anthelme.risser@gmail.com',
-                        :age => 23,
-                        :phone => '0130400535',
-                        :address => '27bis, rue du Progrès 93100 Montreuil',
-                        :password => 'devdev',
-                        :password_confirmation => 'devdev'
+User.create! username: 'Anthelme Risser',
+                        email: 'anthelme.risser@gmail.com',
+                        age: 23,
+                        phone: '0130400535',
+                        address: '27bis, rue du Progrès 93100 Montreuil',
+                        password: 'devdev',
+                        password_confirmation: 'devdev'
 
-userSix = User.create! :username => 'Alexandre Chichportich',
-                       :email => 'alexanre.chichportich@hetic.net',
-                       :age => '21',
-                       :phone => '0147498143',
-                       :address => '27bis, rue du Progrès 93100 Montreuil',
-                       :password => 'password',
-                       :password_confirmation => 'password'
+User.create! username: 'Alexandre Chichportich',
+                       email: 'alexanre.chichportich@hetic.net',
+                       age: '21',
+                       phone: '0147498143',
+                       address: '27bis, rue du Progrès 93100 Montreuil',
+                       password: 'password',
+                       password_confirmation: 'password'
 
-userSeven = User.create! :username => 'Yann-Edern Gillet',
-                         :email => 'yann-edern.gillet@hetic.net',
-                         :age => '21',
-                         :phone => '0147498143',
-                         :address => '27bis, rue du Progrès 93100 Montreuil',
-                         :password => 'password',
-                         :password_confirmation => 'password'
+User.create! username: 'Yann-Edern Gillet',
+                         email: 'yann-edern.gillet@hetic.net',
+                         age: '21',
+                         phone: '0147498143',
+                         address: '27bis, rue du Progrès 93100 Montreuil',
+                         password: 'password',
+                         password_confirmation: 'password'
 
-userEight = User.create! :username => 'Juliette Gregoris',
-                         :email => 'juliette.gregoris@hetic.net',
-                         :age => '22',
-                         :phone => '0147498143',
-                         :address => '27bis, rue du Progrès 93100 Montreuil',
-                         :password => 'password',
-                         :password_confirmation => 'password'
+User.create! username: 'Juliette Gregoris',
+                         email: 'juliette.gregoris@hetic.net',
+                         age: '22',
+                         phone: '0147498143',
+                         address: '27bis, rue du Progrès 93100 Montreuil',
+                         password: 'password',
+                         password_confirmation: 'password'
 
 offer_one = Offer.create! title: 'Batman',
                           user_id: user_one.id,
