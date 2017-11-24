@@ -38,9 +38,19 @@ class UserTest < ActiveSupport::TestCase
         email: 'userOne@email.com',
         password: 'password',
         age: '22',
+        enterprise: true,
         address: 'NY',
         phone: '0612686811',
         avatar: sample_file
+    )
+    assert u.valid?
+  end
+
+  test 'is valid with an enterprise' do
+    u = User.create(
+        email: 'userOne@email.com',
+        password: 'password',
+        enterprise: true
     )
     assert u.valid?
   end
