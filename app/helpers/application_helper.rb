@@ -9,9 +9,8 @@ module ApplicationHelper
 
   def nice_display_of_offer_options(user = current_user)
     return unless user_signed_in?
-    if user.enterprise
-      render partial: 'layouts/partials/offer_options', locals: {current_user: user}
-    end
+    return unless user.enterprise
+    render partial: 'layouts/partials/offer_options', locals: {current_user: user}
   end
 
   def avatar_url(user = current_user, size = :thumb)
