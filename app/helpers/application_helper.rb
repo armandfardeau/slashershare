@@ -1,9 +1,9 @@
 module ApplicationHelper
   def nice_display_of_user_options(user)
     if user_signed_in?
-      render 'layouts/partials/profile_options', locals: {current_user: user}
+      render partial: 'layouts/partials/profile_options', locals: {current_user: user}
     else
-      render 'layouts/partials/sign_in_up'
+      render partial: 'layouts/partials/sign_in_up'
     end
   end
 
@@ -13,5 +13,10 @@ module ApplicationHelper
     else
       user.avatar.url(size)
     end
+  end
+
+  def nice_display_of_tag_list(offer = @offer)
+    return unless offer.tag_list
+    render partial: 'partials/tag_list', locals: {offer: offer}
   end
 end
