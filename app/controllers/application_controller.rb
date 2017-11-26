@@ -19,4 +19,9 @@ class ApplicationController < ActionController::Base
         :password_confirmation
     ])
   end
+
+  def check_user_type(path = root_path)
+    return if current_user.enterprise
+    redirect_to path, notice: 'You must be an enterprise type member to access this area.'
+  end
 end
