@@ -58,7 +58,19 @@
     
     
     
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
     
+    <li ><a href="#method-i-nice_offers_list">#nice_offers_list</a>
+    
+    <li ><a href="#method-i-user_profile_type">#user_profile_type</a>
+    
+  </ul>
+</div>
+
   </div>
 </nav>
 
@@ -84,6 +96,81 @@
     
 
     
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-nice_offers_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">nice_offers_list</span><span
+            class="method-args">(user = @user)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="nice_offers_list-source">
+            <pre><span class="ruby-comment"># File app/helpers/users_helper.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nice_offers_list</span>(<span class="ruby-identifier">user</span> = <span class="ruby-ivar">@user</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">offers</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">enterprise</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">partial</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;users/partials/offers_list&#39;</span>, <span class="ruby-identifier">locals</span><span class="ruby-operator">:</span> {<span class="ruby-identifier">user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-user_profile_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">user_profile_type</span><span
+            class="method-args">(user = @user)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="user_profile_type-source">
+            <pre><span class="ruby-comment"># File app/helpers/users_helper.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">user_profile_type</span>(<span class="ruby-identifier">user</span> = <span class="ruby-ivar">@user</span>)
+  <span class="ruby-identifier">user</span>.<span class="ruby-identifier">enterprise</span> <span class="ruby-operator">?</span> <span class="ruby-string">&#39;enterprise&#39;</span> <span class="ruby-operator">:</span> <span class="ruby-string">&#39;slasher&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
   </section>
 </main>
 
