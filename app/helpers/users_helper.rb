@@ -1,6 +1,6 @@
 module UsersHelper
   def nice_offers_list(user = @user)
-    return unless user.offers
+    return if user.offers.nil? || !user.enterprise
     render partial: 'users/partials/offers_list', locals: {user: user}
   end
 
