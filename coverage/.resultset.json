@@ -1,29 +1,11 @@
 {
   "MiniTest": {
     "coverage": {
-      "/Users/armandfardeau/WWW/slashershare/app/helpers/application_helper.rb": [
-        1,
-        1,
-        10,
-        4,
-        null,
-        6,
-        null,
-        null,
-        null,
-        1,
-        7,
-        1,
-        null,
-        6,
-        null,
-        null,
-        null
-      ],
       "/Users/armandfardeau/WWW/slashershare/app/controllers/offers_controller.rb": [
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -33,11 +15,10 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null,
         1,
-        0,
         0,
         0,
         null,
@@ -72,40 +53,17 @@
         null,
         null
       ],
-      "/Users/armandfardeau/WWW/slashershare/app/controllers/application_controller.rb": [
+      "/Users/armandfardeau/WWW/slashershare/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
         1,
         1,
         null,
-        1,
-        null,
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/armandfardeau/WWW/slashershare/app/helpers/offers_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/armandfardeau/WWW/slashershare/app/helpers/pages_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/armandfardeau/WWW/slashershare/app/helpers/users_helper.rb": [
-        1,
         null
       ],
       "/Users/armandfardeau/WWW/slashershare/app/controllers/pages_controller.rb": [
@@ -120,19 +78,6 @@
         null,
         1,
         null,
-        null,
-        null
-      ],
-      "/Users/armandfardeau/WWW/slashershare/app/controllers/users_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
         null,
         null
       ],
@@ -166,19 +111,105 @@
       ],
       "/Users/armandfardeau/WWW/slashershare/app/models/user.rb": [
         0,
-        null,
-        null,
         0,
-        0,
+        null,
         null,
         0,
         0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
         0,
         0,
         0,
         0
       ],
       "/Users/armandfardeau/WWW/slashershare/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/armandfardeau/WWW/slashershare/app/controllers/application_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/armandfardeau/WWW/slashershare/app/helpers/pages_helper.rb": [
+        0,
+        0
+      ],
+      "/Users/armandfardeau/WWW/slashershare/app/helpers/offers_helper.rb": [
+        0,
+        0
+      ],
+      "/Users/armandfardeau/WWW/slashershare/app/helpers/users_helper.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/armandfardeau/WWW/slashershare/app/helpers/application_helper.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
         0,
         0
       ],
@@ -195,6 +226,6 @@
         0
       ]
     },
-    "timestamp": 1511513156
+    "timestamp": 1511910107
   }
 }
