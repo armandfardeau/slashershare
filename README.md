@@ -88,6 +88,11 @@ gem install bundler
 bundle install --without production
 ```
 
+* install dependancies for paperclip 
+```bash
+brew install imagemagick
+```
+
 * Make migration and load seed
 ```bash
 rails db:migrate
@@ -103,7 +108,6 @@ rails s
 ```bash
 open http://localhost:3000
 ```
-
 ______________________________________________________________
 
 ## Contributions
@@ -117,6 +121,7 @@ Each feature should be covered by **at least** one test.
 
 Each pull request need to be validated by :
 
+- rubocop
 - codeclimate
 - coveralls
 - travis

@@ -64,6 +64,12 @@
 
   <ul class="link-list" role="directory">
     
+    <li ><a href="#method-i-avatar_url">#avatar_url</a>
+    
+    <li ><a href="#method-i-nice_display_of_offer_options">#nice_display_of_offer_options</a>
+    
+    <li ><a href="#method-i-nice_display_of_tag_list">#nice_display_of_tag_list</a>
+    
     <li ><a href="#method-i-nice_display_of_user_options">#nice_display_of_user_options</a>
     
   </ul>
@@ -100,11 +106,116 @@
        </header>
 
     
+      <div id="method-i-avatar_url" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">avatar_url</span><span
+            class="method-args">(user = current_user, size = :thumb)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="avatar_url-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">avatar_url</span>(<span class="ruby-identifier">user</span> = <span class="ruby-identifier">current_user</span>, <span class="ruby-identifier">size</span> = <span class="ruby-value">:thumb</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">user</span>.<span class="ruby-identifier">avatar?</span>
+    <span class="ruby-string">&#39;default_profil_picture.svg&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">user</span>.<span class="ruby-identifier">avatar</span>.<span class="ruby-identifier">url</span>(<span class="ruby-identifier">size</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-nice_display_of_offer_options" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">nice_display_of_offer_options</span><span
+            class="method-args">(user = current_user)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="nice_display_of_offer_options-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nice_display_of_offer_options</span>(<span class="ruby-identifier">user</span> = <span class="ruby-identifier">current_user</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user</span>.<span class="ruby-identifier">enterprise</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">user_signed_in?</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">partial</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;layouts/partials/offer_options&#39;</span>, <span class="ruby-identifier">locals</span><span class="ruby-operator">:</span> {<span class="ruby-identifier">current_user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-nice_display_of_tag_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">nice_display_of_tag_list</span><span
+            class="method-args">(offer = @offer)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="nice_display_of_tag_list-source">
+            <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nice_display_of_tag_list</span>(<span class="ruby-identifier">offer</span> = <span class="ruby-ivar">@offer</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">offer</span>.<span class="ruby-identifier">tag_list</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-identifier">partial</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;partials/tag_list&#39;</span>, <span class="ruby-identifier">locals</span><span class="ruby-operator">:</span> {<span class="ruby-identifier">offer</span><span class="ruby-operator">:</span> <span class="ruby-identifier">offer</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
       <div id="method-i-nice_display_of_user_options" class="method-detail ">
         
         <div class="method-heading">
           <span class="method-name">nice_display_of_user_options</span><span
-            class="method-args">(user)</span>
+            class="method-args">(user = current_user)</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -120,11 +231,11 @@
           
           <div class="method-source-code" id="nice_display_of_user_options-source">
             <pre><span class="ruby-comment"># File app/helpers/application_helper.rb, line 2</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">nice_display_of_user_options</span>(<span class="ruby-identifier">user</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nice_display_of_user_options</span>(<span class="ruby-identifier">user</span> = <span class="ruby-identifier">current_user</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">user_signed_in?</span>
-    <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;layouts/partials/profile_options&#39;</span>, <span class="ruby-identifier">locals</span><span class="ruby-operator">:</span> {<span class="ruby-identifier">current_user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>}
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">partial</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;layouts/partials/profile_options&#39;</span>, <span class="ruby-identifier">locals</span><span class="ruby-operator">:</span> {<span class="ruby-identifier">current_user</span><span class="ruby-operator">:</span> <span class="ruby-identifier">user</span>}
   <span class="ruby-keyword">else</span>
-    <span class="ruby-identifier">render</span> <span class="ruby-string">&#39;layouts/partials/sign_in_up&#39;</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-identifier">partial</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;layouts/partials/sign_in_up&#39;</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>

@@ -1,6 +1,7 @@
 class OffersController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :set_offer, only: [:show, :edit, :update]
+  before_action :check_user_type, only: [:new, :create, :edit]
 
   def index
     @offers = current_user.offers
@@ -14,7 +15,6 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = current_user.offers.build(allowed_params)
     if @offer.save
       redirect_to @offer, notice: 'Created offer.'
     else

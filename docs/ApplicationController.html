@@ -71,6 +71,8 @@
 
   <ul class="link-list" role="directory">
     
+    <li ><a href="#method-i-check_user_type">#check_user_type</a>
+    
     <li ><a href="#method-i-configure_permitted_parameters">#configure_permitted_parameters</a>
     
   </ul>
@@ -107,6 +109,40 @@
        </header>
 
     
+      <div id="method-i-check_user_type" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">check_user_type</span><span
+            class="method-args">(path = root_path)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="check_user_type-source">
+            <pre><span class="ruby-comment"># File app/controllers/application_controller.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_user_type</span>(<span class="ruby-identifier">path</span> = <span class="ruby-identifier">root_path</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">enterprise</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">path</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;You must be an enterprise type member to access this area.&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
       <div id="method-i-configure_permitted_parameters" class="method-detail ">
         
         <div class="method-heading">
@@ -130,6 +166,8 @@
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">configure_permitted_parameters</span>
   <span class="ruby-identifier">devise_parameter_sanitizer</span>.<span class="ruby-identifier">permit</span>(<span class="ruby-value">:sign_up</span>, <span class="ruby-identifier">keys</span><span class="ruby-operator">:</span> [<span class="ruby-value">:username</span>])
   <span class="ruby-identifier">devise_parameter_sanitizer</span>.<span class="ruby-identifier">permit</span>(<span class="ruby-value">:account_update</span>, <span class="ruby-identifier">keys</span><span class="ruby-operator">:</span> [
+      <span class="ruby-value">:avatar</span>,
+      <span class="ruby-value">:enterprise</span>,
       <span class="ruby-value">:username</span>,
       <span class="ruby-value">:email</span>,
       <span class="ruby-value">:age</span>,

@@ -5,6 +5,7 @@ rvm install ruby-2.4.2
 rvm use 2.4.2
 gem install bundler
 bundle install --without production
+brew install imagemagick
 spring stop
 rails db:environment:set RAILS_ENV=development
 rails reload
