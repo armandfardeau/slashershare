@@ -99,6 +99,11 @@ gem install mailcatcher
 cp -n ./.env.example ./.env
 ```
 
+* copy .env.example and fill it with your env vars
+```bash
+cp -n ./.env.example ./.env
+```
+
 * Make migration and load seed
 ```bash
 rails db:migrate
