@@ -15,7 +15,9 @@ class OffersController < ApplicationController
   end
 
   def create
+    @offer = current_user.offers.build(allowed_params)
     if @offer.save
+      OfferMailer.new_offer_email(current_user, @offer).deliver_later
       redirect_to @offer, notice: 'Created offer.'
     else
       render :new
