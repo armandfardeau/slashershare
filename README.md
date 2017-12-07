@@ -88,9 +88,15 @@ gem install bundler
 bundle install --without production
 ```
 
-* install dependancies for paperclip 
+* install dependancies for paperclip and mailcatcher
 ```bash
 brew install imagemagick
+gem install mailcatcher
+```
+
+* copy .env.example and fill it with your env vars
+```bash
+cp -n ./.env.example ./.env
 ```
 
 * copy .env.example and fill it with your env vars
@@ -107,6 +113,10 @@ rails reload
 * Start rails server
 ```bash
 rails s
+```
+* Start mailcatcher server in a new tab (cmd + d on Iterm2)
+```bash
+mailcatcher
 ```
 
 * Start browsing

@@ -12,6 +12,9 @@ Rails.application.configure do
       moderation: 'aws_rek'
   )
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = {host: ENV['HOST_NAME'], protocol: 'https'}
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

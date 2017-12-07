@@ -7,6 +7,7 @@ cp -n ./.env.example ./.env
 gem install bundler
 bundle install --without production
 brew install imagemagick
+gem install mailcatcher
 spring stop
 rails db:environment:set RAILS_ENV=development
 rails reload
