@@ -93,6 +93,11 @@ bundle install --without production
 brew install imagemagick
 ```
 
+* copy .env.example and fill it with your env vars
+```bash
+cp -n ./.env.example ./.env
+```
+
 * Make migration and load seed
 ```bash
 rails db:migrate

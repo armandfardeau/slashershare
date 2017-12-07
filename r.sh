@@ -3,6 +3,7 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm
 rvm install ruby-2.4.2
 rvm use 2.4.2
+cp -n ./.env.example ./.env
 gem install bundler
 bundle install --without production
 brew install imagemagick
