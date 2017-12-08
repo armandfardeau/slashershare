@@ -8,7 +8,8 @@ Rails.application.routes.draw do
              path_names: {edit: 'profile'}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :offers
-  get 'list', to: 'pages#list'
   get 'tags/:tag', to: 'pages#list', as: :tag
+  get '/search', to: 'pages#search'
+  get '/list', to: 'pages#list'
   root 'pages#home'
 end

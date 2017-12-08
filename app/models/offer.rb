@@ -5,4 +5,11 @@ class Offer < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :place, presence: true
+
+  def self.search(term)
+    result = where('title LIKE ?', "%#{term}%").order('id DESC')
+    return result unless result.nil? && result.empty?
+    order('id DESC')
+  end
 end
+
