@@ -7,9 +7,9 @@ class Offer < ApplicationRecord
   validates :place, presence: true
 
   def self.search(term)
-    result = where('title LIKE ?', "%#{term}%").order('id DESC')
+    result = where('title LIKE ?', "%#{term}%").or where('description LIKE ?', "%#{term}%")
+    result.order('id DESC')
     return result unless result.nil? && result.empty?
     order('id DESC')
   end
 end
-
