@@ -10,4 +10,9 @@ class PagesController < ApplicationController
       @offers = Offer.all
     end
   end
+
+  def search
+    @offers = Offer.search(params[:search])
+    render 'pages/search', locals: {offers: @offers}
+  end
 end
