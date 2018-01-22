@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 # use paperclip and cloudinary to store images
-gem 'paperclip', '~> 5.0.0'
+gem 'paperclip'
 gem 'paperclip-cloudinary'
 
 # Use rubocop as a linter
