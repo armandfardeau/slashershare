@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
     devise_parameter_sanitizer.permit(:account_update, keys: [
         :avatar,
+        :enterprise,
         :username,
         :email,
         :age,
@@ -17,5 +18,10 @@ class ApplicationController < ActionController::Base
         :password,
         :password_confirmation
     ])
+  end
+
+  def check_user_type(path = root_path)
+    return if current_user.enterprise
+    redirect_to path, notice: 'You must be an enterprise type member to access this area.'
   end
 end

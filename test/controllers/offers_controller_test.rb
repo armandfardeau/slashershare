@@ -45,4 +45,18 @@ class OffersControllerTest < ActionDispatch::IntegrationTest
     assert_response :redirect
     assert_redirected_to new_user_session_path
   end
+
+  # user type redirection test
+
+  test 'should get create if enterprise type' do
+    logged_in(users(:one))
+    get new_offer_path
+    assert_response :success
+  end
+
+  test 'should not get create if not enterprise type' do
+    logged_in(users(:two))
+    get new_offer_path
+    assert_response :redirect
+  end
 end
