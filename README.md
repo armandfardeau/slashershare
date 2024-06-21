@@ -88,6 +88,17 @@ gem install bundler
 bundle install --without production
 ```
 
+* install dependancies for paperclip and mailcatcher
+```bash
+brew install imagemagick
+gem install mailcatcher
+```
+
+* copy .env.example and fill it with your env vars
+```bash
+cp -n ./.env.example ./.env
+```
+
 * Make migration and load seed
 ```bash
 rails db:migrate
@@ -98,12 +109,15 @@ rails reload
 ```bash
 rails s
 ```
+* Start mailcatcher server in a new tab (cmd + d on Iterm2)
+```bash
+mailcatcher
+```
 
 * Start browsing
 ```bash
 open http://localhost:3000
 ```
-
 ______________________________________________________________
 
 ## Contributions
@@ -117,6 +131,7 @@ Each feature should be covered by **at least** one test.
 
 Each pull request need to be validated by :
 
+- rubocop
 - codeclimate
 - coveralls
 - travis

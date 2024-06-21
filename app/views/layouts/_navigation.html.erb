@@ -2,14 +2,11 @@
   <ul>
     <li><%= link_to "Home", root_path %> </li>
     <li><%= link_to "Show all offers", list_path %> </li>
-    <% if user_signed_in? %>
-        <li><%= link_to "My offers", offers_path %> </li>
-        <li><%= link_to "New offer", new_offer_path %> </li>
-    <% end %>
+    <%= nice_display_of_offer_options %>
   </ul>
 
   <ul>
-    <%= nice_display_of_user_options(current_user) %>
+    <%= nice_display_of_user_options %>
   </ul>
 </nav>
 <p class="notice"><%= notice %></p>

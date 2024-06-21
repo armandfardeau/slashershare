@@ -1,0 +1,8 @@
+<h3> See my offer:</h3>
+<% user.offers.each do |offer| %>
+    <div>
+      <h2><%= offer.title %></h2>
+      <p><%= offer.description %></p>
+      <%= nice_display_of_tag_list(offer) %>
+    </div>
+<% end %>

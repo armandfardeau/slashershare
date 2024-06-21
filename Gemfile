@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 # use paperclip and cloudinary to store images
-gem 'paperclip', '~> 5.0.0'
+gem "paperclip", "~> 6.0.0"
 gem 'paperclip-cloudinary'
 
 # Use rubocop as a linter
@@ -66,6 +66,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+
+  # use dotenv to env var
+  gem 'dotenv-rails', groups: [:development, :test]
 end
 
 group :development do

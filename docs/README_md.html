@@ -74,9 +74,19 @@
 
   <ul class="link-list">
   
+    <li><a href="./CODE_OF_CONDUCT_md.html">CODE_OF_CONDUCT</a>
+  
+    <li><a href="./CONTRIBUTING_md.html">CONTRIBUTING</a>
+  
     <li><a href="./Gemfile.html">Gemfile</a>
   
     <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="./ISSUE_TEMPLATE_md.html">ISSUE_TEMPLATE</a>
+  
+    <li><a href="./LICENSE.html">LICENSE</a>
+  
+    <li><a href="./PULL_REQUEST_TEMPLATE_md.html">PULL_REQUEST_TEMPLATE</a>
   
     <li><a href="./README_md.html">README</a>
   
@@ -103,8 +113,6 @@
     <li><a href="./app/assets/stylesheets/partials/_users_scss.html">_users.scss</a>
   
     <li><a href="./config_ru.html">config.ru</a>
-  
-    <li><a href="./db/test_sqlite3.html">test.sqlite3</a>
   
     <li><a href="./lib/tasks/doc_rake.html">doc.rake</a>
   
@@ -159,6 +167,9 @@ src="https://api.codeclimate.com/v1/badges/4f04691b4116554cbe63/maintainability"
 
 <p>Take a look on the website <a
 href="https://slashershare.herokuapp.com/">SlasherShare</a></p>
+
+<p>Check the doc <a
+href="https://armandfardeau.github.io/slashershare/">SlasherShare-doc</a></p>
 
 <p>Table of content</p>
 <ol><li>
@@ -232,6 +243,9 @@ ruby -v</pre>
 </li><li>
 <p>install dependancies <code>bash bundle install --without production </code></p>
 </li><li>
+<p>install dependancies for paperclip <code>bash brew install imagemagick
+</code></p>
+</li><li>
 <p>Make migration and load seed <code>bash rails db:migrate rails reload
 </code></p>
 </li><li>
@@ -254,6 +268,8 @@ clean as possible, you&#39;re advised to follow the rules.</p>
 
 <p>Each pull request need to be validated by :</p>
 <ul><li>
+<p>rubocop</p>
+</li><li>
 <p>codeclimate</p>
 </li><li>
 <p>coveralls</p>
@@ -281,6 +297,13 @@ src="https://kirstiejane.github.io/friendly-github-intro/assets/images-slides/my
 
 <p>The following command: <code>bash rails reload </code> Do the same than:
 <code>bash  rake db:drop db:create db:migrate db:seed </code></p>
+
+<p>Generate doc with Rdoc the simple way : <code>bash rails doc:generate
+</code></p>
+
+<p>Get doc status with : <code>bash rails doc:status </code></p>
+
+<p>You can get the list of rake task with : <code>bash rails -T </code></p>
 
 <h3 id="label-Active+admin+back+office">Active admin back office<span><a href="#label-Active+admin+back+office">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
@@ -317,8 +340,13 @@ href="https://slashershare.herokuapp.com/admin">slashershare.herokuapp.com/admin
 <ul><li>
 <p>Database initialization rails db:migrate</p>
 </li><li>
-<p>How to run the test suite rails test</p>
-</li><li>
+<p>How to run the test suite</p>
+</li></ul>
+
+<pre class="ruby"><span class="ruby-identifier">rails</span> <span class="ruby-identifier">test</span>
+<span class="ruby-identifier">rubocop</span>
+</pre>
+<ul><li>
 <p>Services (job queues, cache servers, search engines, etc.)</p>
 </li><li>
 <p>Deployment instructions</p>

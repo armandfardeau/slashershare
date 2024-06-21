@@ -14,6 +14,11 @@
     </div>
 
     <div class="field">
+      <%= f.label :enterprise %><br/>
+      <%= f.check_box :enterprise %>
+    </div>
+
+    <div class="field">
       <%= f.label :password %>
       <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>

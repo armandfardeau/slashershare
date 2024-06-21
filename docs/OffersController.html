@@ -138,9 +138,8 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/offers_controller.rb, line 16</span>
+            <pre><span class="ruby-comment"># File app/controllers/offers_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
-  <span class="ruby-ivar">@offer</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">offers</span>.<span class="ruby-identifier">build</span>(<span class="ruby-identifier">allowed_params</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@offer</span>.<span class="ruby-identifier">save</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@offer</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">&#39;Created offer.&#39;</span>
   <span class="ruby-keyword">else</span>
@@ -241,7 +240,7 @@
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/offers_controller.rb, line 5</span>
+            <pre><span class="ruby-comment"># File app/controllers/offers_controller.rb, line 6</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
   <span class="ruby-ivar">@offers</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">offers</span>
 <span class="ruby-keyword">end</span></pre>
@@ -274,7 +273,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/offers_controller.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/controllers/offers_controller.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@offer</span> = <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">offers</span>.<span class="ruby-identifier">build</span>
 <span class="ruby-keyword">end</span></pre>
@@ -307,7 +306,7 @@
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/offers_controller.rb, line 9</span>
+            <pre><span class="ruby-comment"># File app/controllers/offers_controller.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
 <span class="ruby-keyword">end</span></pre>
           </div>

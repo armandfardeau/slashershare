@@ -1,6 +1,27 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  Paperclip::Attachment.default_options.merge!(
+      storage: :cloudinary,
+      path: ':id/:style/:filename',
+      cloudinary_url_options: {
+          default: {
+              secure: true
+          }
+      },
+      moderation: 'aws_rek'
+  )
+  ActionMailer::Base.smtp_settings = {
+      address: 'smtp.sendgrid.net',
+      port: '587',
+      authentication: :plain,
+      user_name: ENV['SENDGRID_USERNAME'],
+      password: ENV['SENDGRID_PASSWORD'],
+      domain: 'heroku.com',
+      enable_starttls_auto: true
+  }
+  config.action_mailer.default_url_options = {host: ENV['HOST_NAME'], protocol: 'https'}
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

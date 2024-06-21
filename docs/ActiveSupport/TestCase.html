@@ -73,6 +73,8 @@
     
     <li ><a href="#method-i-logged_in">#logged_in</a>
     
+    <li ><a href="#method-i-sample_file">#sample_file</a>
+    
   </ul>
 </div>
 
@@ -111,7 +113,7 @@
         
         <div class="method-heading">
           <span class="method-name">logged_in</span><span
-            class="method-args">()</span>
+            class="method-args">(user = users(:one))</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -127,8 +129,41 @@
           
           <div class="method-source-code" id="logged_in-source">
             <pre><span class="ruby-comment"># File test/test_helper.rb, line 10</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">logged_in</span>
-  <span class="ruby-identifier">sign_in</span> <span class="ruby-identifier">users</span>(<span class="ruby-value">:one</span>), <span class="ruby-identifier">scope</span><span class="ruby-operator">:</span> <span class="ruby-value">:user</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logged_in</span>(<span class="ruby-identifier">user</span> = <span class="ruby-identifier">users</span>(<span class="ruby-value">:one</span>))
+  <span class="ruby-identifier">sign_in</span> <span class="ruby-identifier">user</span>, <span class="ruby-identifier">scope</span><span class="ruby-operator">:</span> <span class="ruby-value">:user</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sample_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sample_file</span><span
+            class="method-args">(filename = 'sample-file.png')</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="sample_file-source">
+            <pre><span class="ruby-comment"># File test/test_helper.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sample_file</span>(<span class="ruby-identifier">filename</span> = <span class="ruby-string">&#39;sample-file.png&#39;</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;test&#39;</span>, <span class="ruby-string">&#39;fixtures&#39;</span>, <span class="ruby-string">&#39;files&#39;</span>, <span class="ruby-identifier">filename</span>))
 <span class="ruby-keyword">end</span></pre>
           </div>
           
